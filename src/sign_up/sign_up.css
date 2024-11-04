@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.back > a > img{
+    width: 4wv;
+    height: 4vh;
+    margin-top: 2vh;
+    margin-left: 2vw;
+}
+
+.form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    margin: 3vh;
+}
+.form .left > img{
+    width: 80vw;
+    margin-left: -25vw;
+}
+
+.right {
+    margin-right: -4vw;
+    width: 30vw;
+}
+
+.right .heading{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-style: normal;
+    font-size: 50px;
+    padding: 2%;
+    margin-top: 0vh;
+    /* margin-right: -8vw; */
+}
+
+.right .subheading{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: regular;
+    font-style: normal;
+    font-size: 20px;
+    padding-bottom: 5%;
+    width: 20vw;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(15, 36, 119);
+}
+
+label {
+    font-size: 25px;
+    font-weight: bold;
+    padding: -5%;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+input {
+    padding: 4%;
+    border: 1px black solid;
+    border-radius: 10px;
+}
+
+input ::placeholder{
+    font-size: 40px;
+}
+
+select {
+    padding: 4%;
+    border: 1px black solid;
+    border-radius: 10px;
+}
+
+button {
+    width: 7vw;
+    padding: 4%;
+    margin-bottom: 5vh;
+}
+
+#submit {
+    background-color: blue;
+    color: white;
+    border: 1px solid blue;
+    border-radius: 10px;
+}
+
+#reset{
+    background-color: red;
+    color: white;
+    border: 1px solid red;
+    border-radius: 10px;
+    
+}
+
+/* phone screen */
+@media screen and (max-width: 450px){
+    .left{
+        display: none;
+    }
+    .right{
+        width: 70vw;
+    }
+    .right .subheading{
+        width: 100vw;
+    }
+    input::placeholder{
+        font-size: 16px;
+    }
+    button{
+        width: 20vw;
+    }
+}
+
+/* tablet screen */
+@media screen and (max-width: 850px) and (min-width: 450px){
+    .right{
+        width: 70vw;
+    }
+    .right .subheading{
+        width: 100%;
+    }
+    .form .left > img{
+        display: none;
+    }
+    button {
+        width: 20vw;
+        font-size: 20px;
+    }
+    input::placeholder{
+        font-size: 20px;
+    }
+    select{
+        font-size: 20px;
+    }
+}
