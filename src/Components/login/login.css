@@ -6,47 +6,49 @@
     box-sizing: border-box;
 }
 
-.back > a > img{
-    width: 4wv;
-    height: 4vh;
+.back-login a > img{
+    /* width: 4vw;
+    height: 4vh;*/
     margin-top: 2vh;
+    /*padding: 4%; */
     margin-left: 2vw;
-    /* padding: 4%; */
 }
 
-.form{
+.form-login{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    /* align-items: center; */
+    align-items: center;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     margin-top: -2vh;
 }
-.form .left > img{
+.form-login .left-login > img{
     width: 55vw;
+    height: auto;
     margin-left: -10vw;
-    margin-top: -15vh;
+    margin-top: -20vh;
     margin-right: 5vw;
 }
 
-.right {
+.right-login {
     margin-right: -10vw;
     width: 25vw;
+    margin-top: 15vh;
 }
 
-.right .heading{
+.right-login .heading{
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: bolder;
     font-style: normal;
     font-size: 50px;
     padding: 2%;
-    margin-top: 10vh;
-    /* margin-right: -8vw; */
+    margin-top: -40vh;
+    margin-right: -8vw;
 }
 
-.right .subheading{
+.right-login .subheading{
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: regular;
@@ -56,53 +58,48 @@
     width: 20vw;
 }
 
-a {
+.right-login a {
     text-decoration: none;
     color: rgb(15, 36, 119);
 }
 
-label {
+.right-login label {
     font-size: 25px;
     font-weight: bold;
     padding: -5%;
 }
-form {
+.right-login form {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-input {
-    padding: 4%;
+.right-login input {
+    padding: 3%;
     border: 1px black solid;
     border-radius: 10px;
 }
 
-input ::placeholder{
-    font-size: 40px;
+.right-login form input::placeholder{
+    font-size: 15px;
 }
 
-select {
-    padding: 4%;
-    border: 1px black solid;
-    border-radius: 10px;
-}
 
-button {
+.right-login button {
     width: 5vw;
     padding: 4%;
     margin-bottom: 5vh;
     font-size: 15px;
 }
 
-#submit {
+.right-login #submit {
     background-color: blue;
     color: white;
     border: 1px solid blue;
     border-radius: 10px;
 }
 
-#reset{
+.right-login #reset{
     background-color: red;
     color: white;
     border: 1px solid red;
@@ -112,42 +109,41 @@ button {
 
 /* phone screen */
 @media screen and (max-width: 450px){
-    .left{
+    .left-login{
         display: none;
     }
-    .right{
+    .right-login{
         width: 70vw;
+        margin-top: 50vh;
     }
-    .right .subheading{
+    .right-login .subheading{
         width: 100vw;
     }
-    input::placeholder{
+    .right-login input::placeholder{
         font-size: 16px;
     }
-    button{
+    .right-login button{
         width: 20vw;
     }
 }
 
 /* tablet screen */
 @media screen and (max-width: 850px) and (min-width: 450px){
-    .right{
+    .right-login{
         width: 70vw;
+        margin-top: 50vh;
     }
-    .right .subheading{
+    .right-login .subheading{
         width: 100%;
     }
-    .form .left > img{
+    .form-login .left-login > img{
         display: none;
     }
-    button {
+    .right-login button {
         width: 20vw;
         font-size: 20px;
     }
-    input::placeholder{
-        font-size: 20px;
-    }
-    select{
+    .right-login input::placeholder{
         font-size: 20px;
     }
 }

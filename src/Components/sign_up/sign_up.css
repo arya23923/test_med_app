@@ -8,32 +8,36 @@
 }
 
 .back > a > img{
-    width: 4wv;
-    height: 4vh;
+    /* width: 3wv; */
+    /* height: 4vh; */
     margin-top: 2vh;
     margin-left: 2vw;
 }
 
-.form{
+.form-sign{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    /* align-items: center; */
+    align-items: center;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     margin: 3vh;
 }
-.form .left > img{
-    width: 80vw;
-    margin-left: -25vw;
+.form-sign .left-sign > img{
+    width: 70vw;
+    height: auto;
+    margin-left: -10vw;
+    margin-top: -10vh;
 }
 
-.right {
-    margin-right: -4vw;
+.right-sign {
+    /* margin-right: -20vw; */
     width: 30vw;
+    margin-top: -2vh;
+    padding-left: 5%;
 }
 
-.right .heading{
+.right-sign .heading{
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: bolder;
@@ -41,10 +45,10 @@
     font-size: 50px;
     padding: 2%;
     margin-top: 0vh;
-    /* margin-right: -8vw; */
+    margin-right: -8vw;
 }
 
-.right .subheading{
+.right-sign .subheading{
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: regular;
@@ -54,80 +58,93 @@
     width: 20vw;
 }
 
-a {
+.right-sign > a {
     text-decoration: none;
     color: rgb(15, 36, 119);
 }
 
-label {
-    font-size: 25px;
+.right-sign > form > label {
+    font-size: 30px;
     font-weight: bold;
     padding: -5%;
 }
-form {
+.right-sign > form {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-input {
-    padding: 4%;
+.right-sign > form > input {
+    padding: 3%;
     border: 1px black solid;
     border-radius: 10px;
+    width: 25vw;
 }
 
-input ::placeholder{
-    font-size: 40px;
+.right-sign > form > input::placeholder{
+    font-size: 15px;
 }
 
-select {
-    padding: 4%;
+.right-sign > form > select {
+    padding: 3%;
     border: 1px black solid;
     border-radius: 10px;
+    width: 25vw;
 }
 
-button {
-    width: 7vw;
-    padding: 4%;
+.right-sign .button > button {
+    width: 6vw;
+    padding: 3%;
     margin-bottom: 5vh;
 }
 
-#submit {
+.right-sign .button #submit {
     background-color: blue;
     color: white;
     border: 1px solid blue;
     border-radius: 10px;
 }
 
-#reset{
+.right-sign .button #reset{
     background-color: red;
     color: white;
     border: 1px solid red;
-    border-radius: 10px;
-    
+    border-radius: 10px;    
 }
 
 /* phone screen */
 @media screen and (max-width: 450px){
-    .left{
+    .back a > img{
+        height: 5vh;
+        width: 9vw;
+    }
+    .left-sign{
         display: none;
     }
-    .right{
+    .right-sign{
         width: 70vw;
     }
-    .right .subheading{
+    .right-sign .subheading{
         width: 100vw;
     }
-    input::placeholder{
-        font-size: 16px;
+    .right-sign > form > select{
+        width: 70vw;
+        font-size: 17px;
     }
-    button{
+    .right-sign  form > input{
+        width: 70vw;
+        padding: 3%;
+    }
+    .right-sign  form > input::placeholder{
+        font-size: 17px;
+    }
+    .right-sign .button > button {
         width: 20vw;
     }
 }
 
 /* tablet screen */
-@media screen and (max-width: 850px) and (min-width: 450px){
+/* @media screen and (max-width: 850px) and (min-width: 450px){
     .right{
         width: 70vw;
     }
@@ -147,4 +164,4 @@ button {
     select{
         font-size: 20px;
     }
-}
+} */

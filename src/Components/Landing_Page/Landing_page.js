@@ -17,17 +17,17 @@ const Landing_Page = () => {
                 Our Responsibility
               </span>
             </h1>
-              <div class="blob-cont"> {/* Creating a div with class name 'blob-cont' */}
-                  <div class="blue blob"></div> {/* Creating a blue blob inside the 'blob-cont' div */}
+              <div className="blob-cont"> {/* Creating a div with class name 'blob-cont' */}
+                  <div className="blue blob"></div> {/* Creating a blue blob inside the 'blob-cont' div */}
               </div>
-              <div class="blob-cont"> {/* Creating another div with class name 'blob-cont' */}
-                  <div class="blue1 blob"></div> {/* Creating a different blue blob inside the second 'blob-cont' div */}
+              <div className="blob-cont"> {/* Creating another div with class name 'blob-cont' */}
+                  <div className="blue1 blob"></div> {/* Creating a different blue blob inside the second 'blob-cont' div */}
               </div>
             <h4>
             Consulting with one of the best doctors ensures that patients receive top-notch expertise and personalized care. Being treated with responsibility and compassion in a medical institution fosters trust and comfort, making the healing process smoother. Patients benefit from a supportive environment where their well-being is prioritized. With such dedicated care, individuals are empowered to take an active role in their recovery and maintain better health.
             </h4>
             <a href="#services"> {/* Creating a hyperlink to jump to the 'services' section */}
-              <button class="button">Get Started</button> {/* Creating a button with class name 'button' */}
+              <button className="button">Get Started</button> {/* Creating a button with class name 'button' */}
             </a>
         </div>
       </div>

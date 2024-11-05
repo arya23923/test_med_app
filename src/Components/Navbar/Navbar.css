@@ -7,25 +7,22 @@
     box-sizing: border-box;
 }
 
-header{
+header {
     display: flex;
-    flex-direction: row;
-    /* justify-content: space-between; */
-    /* align-items: flex-end; */
-    /* padding: 3%;     */
-    margin-top: 5vh;
-    margin-left: 4vw;
-    margin-right: 1vw;
+    padding-top: 5vh;
+    padding-left: 4vw;
+    padding-right: 1vw;
 }
 
 img {
     height: 40px;
     width: 40px;
+    margin-left: -4vw;
+    margin-top: 1vh;
 }
 
 .logo{
     display: flex;
-    flex-direction: row;
     justify-content: space-evenly;
     align-self: flex-start;
     width: 30vw;
@@ -36,25 +33,24 @@ img {
     font-weight: 400;
     font-style: normal;
     font-size: 40px;
-    margin-top: -1vh;
 }
 
 .right{
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
     font-family: "Inter", sans-serif;
+    min-width: fit-content;
     font-optical-sizing: auto;
     font-weight: regular;
     font-style: normal;
     font-size: 20px;
-    /* align-items: flex-end; */
+    align-items: flex-end;
     align-self: stretch; 
-    /* padding: -5%; */
-    margin-left: 15vw;
-    margin-top: 1vh;
-    width: 80vw;
-    /* height: 3vw; */
+    padding: -5%;
+    margin-left: 10vw;
+    margin-top: 0vh;
+    width: 30vw;
+    height: 3vw;
 }
 
 a{
@@ -62,31 +58,32 @@ a{
     color: black;
     padding-left: 2%;
     padding-right: 2%;
+    min-width: fit-content;
 }
 
 .health{
-    width: 10vw;
+    width: 6vw;
 }
 
 .sign{
-    width: 7vw;
+    width: 5vw;
     border: 1px solid rgb(6,6,117);
     border-radius: 16px;
     /* min-width: 11vw; */
     padding: 1%;
     margin-top: -1vh;
+   
 }
 
 .log{
-    width: 5vw;
+    width: 3vw;
     border: 1px solid rgb(6,6,117);
     border-radius: 16px;
-    width: 5vw;
     /* min-width: 8vw; */
     padding: 1%;
     margin-top: -1vh;
+    margin-right: -20vw;
 }
-
 
 /* phone screen */
 @media screen and (max-width : 450px){
@@ -114,16 +111,17 @@ a{
     }
     .sign{
         border-radius: 10px;
-        width: 15vw;
+        width: 10vw;
         margin-top: -5px;
         height: 2vh;
     }
     .log{
         border-radius: 10px;
-        width: 10vw;
+        width: 5vw;
         margin-top: -5px;
         height: 2vh;
         margin-left: 1vw;
+        margin-right: 1vw;
     }
 }
 
@@ -132,7 +130,7 @@ a{
     .logo .name{
         font-size: 25px;
         margin-top: -2vh;
-        margin-left: -1vw;
+        margin-left: 0vw;
     }
     img {
         height: 25px;
@@ -143,17 +141,18 @@ a{
     .right{
         margin-top: -2vh;
         font-size: 17px;
-        margin-left: 6vw;
+        margin-left: 3vw;
     }
     .health{
-        width: 18vw;
+        width: 5vw;
     }
     .sign{
-        margin-top: -7px;
-        width: 13vw;
+        margin-top: 2vh;
+        width: 10vw;
     }
     .log{
-        margin-top: -7px;
+        margin-top: 2vh;
         width: 7vw;
+        margin-right: 4vw;
     }
 }

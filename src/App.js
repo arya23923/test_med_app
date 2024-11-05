@@ -8,12 +8,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // Import custom Navbar component
 import Navbar from './Components/Navbar/Navbar';
-
+import SignUp from './Components/sign_up/sign_up'; 
+import Login from './Components/login/login'; 
 import Landing_page from './Components/Landing_Page/Landing_page';
 
 function App() {
   return (
-    <>
       <div className="App">
           {/* Set up BrowserRouter for routing */}
           <BrowserRouter>
@@ -23,11 +23,11 @@ function App() {
             <Routes>
               {/* Define individual Route components for different pages */}
               <Route path="/" element={<Landing_page/>}/>
+              <Route path="/login" element={<Login />} />
+              <Route path="/sign-up" element={<SignUp />} />
             </Routes>
           </BrowserRouter>
       </div>
-
-    </>
   );
 }
 
