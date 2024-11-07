@@ -6,6 +6,8 @@ import React, { useEffect } from 'react';
 // Import components for routing from react-router-dom library
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+
+
 // Import custom Navbar component
 import Navbar from './Components/Navbar/Navbar';
 import SignUp from './Components/sign_up/sign_up'; 

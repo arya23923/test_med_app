@@ -27,7 +27,7 @@
     width: 55vw;
     height: auto;
     margin-left: -10vw;
-    margin-top: -20vh;
+    margin-top: 4vh;
     margin-right: 5vw;
 }
 
@@ -78,6 +78,11 @@
     padding: 3%;
     border: 1px black solid;
     border-radius: 10px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: regular;
+    font-style: normal;
+    font-size: 17px;
 }
 
 .right-login form input::placeholder{

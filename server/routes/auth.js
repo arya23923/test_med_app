@@ -46,6 +46,7 @@ router.post('/register',[
 
     const error = validationResult(req);
     if(!error.isEmpty()){
+        console.log('error of proportions')
         return res.status(400).json({error: error.array()});
     }
 

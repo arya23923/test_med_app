@@ -22,7 +22,16 @@ connectToMongo();
 app.use('/api/auth', require('./routes/auth'));
 
 app.get('/', (req, res) => {
-    res.send('Hello World!');
+    res.send('hello world!');
+});
+
+// Set up a POST route at the '/' path
+app.post('/auth/register', (req, res) => {
+  const data = req.body;
+  
+  // For example, log the data received in the POST request
+  console.log('Received data:', data);
+
 });
 
 

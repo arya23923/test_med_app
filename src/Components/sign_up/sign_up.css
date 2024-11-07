@@ -24,14 +24,14 @@
     margin: 3vh;
 }
 .form-sign .left-sign > img{
-    width: 70vw;
+    width: 60vw;
     height: auto;
     margin-left: -10vw;
-    margin-top: -10vh;
+    margin-top: -20vh;
 }
 
 .right-sign {
-    /* margin-right: -20vw; */
+    margin-right: -10vw;
     width: 30vw;
     margin-top: -2vh;
     padding-left: 5%;
@@ -42,7 +42,7 @@
     font-optical-sizing: auto;
     font-weight: bolder;
     font-style: normal;
-    font-size: 50px;
+    font-size: 45px;
     padding: 2%;
     margin-top: 0vh;
     margin-right: -8vw;
@@ -54,7 +54,7 @@
     font-weight: regular;
     font-style: normal;
     font-size: 20px;
-    padding-bottom: 5%;
+    padding-bottom: 3%;
     width: 20vw;
 }
 
@@ -64,9 +64,9 @@
 }
 
 .right-sign > form > label {
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
-    padding: -5%;
+    /* padding: -5%; */
 }
 .right-sign > form {
     display: flex;
@@ -79,7 +79,15 @@
     border: 1px black solid;
     border-radius: 10px;
     width: 25vw;
+    margin-top: -1vh;
+    margin-bottom: -1vh;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: regular;
+    font-style: normal;
+    font-size: 17px;
 }
+
 
 .right-sign > form > input::placeholder{
     font-size: 15px;
@@ -90,6 +98,8 @@
     border: 1px black solid;
     border-radius: 10px;
     width: 25vw;
+    margin-top: -1vh;
+    margin-bottom: -1vh;
 }
 
 .right-sign .button > button {
@@ -126,6 +136,7 @@
     }
     .right-sign .subheading{
         width: 100vw;
+        align-self: center;
     }
     .right-sign > form > select{
         width: 70vw;
