@@ -26,7 +26,7 @@ const Landing_Page = () => {
             <h4>
             Consulting with one of the best doctors ensures that patients receive top-notch expertise and personalized care. Being treated with responsibility and compassion in a medical institution fosters trust and comfort, making the healing process smoother. 
             </h4>
-            <Link to='/instant-consultation'> {/* Creating a hyperlink to jump to the 'services' section */}
+            <Link to='/service'> {/* Creating a hyperlink to jump to the 'services' section */}
               <button className="button">Get Started</button> {/* Creating a button with class name 'button' */}
             </Link>
         </div>

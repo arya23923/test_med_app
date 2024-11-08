@@ -1,5 +1,52 @@
-import React, { useEffect, useState } from "react";
-import { Link } from 'react-router-dom';
+.service{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10vh;
+}
 
-import "./services.css";
+.service .heading{
+    font-size: 36px;
+    font-weight: bold;
+}
 
+.service .subheading{
+    font-size: 20px;
+    padding: 1%;
+}
+
+.service .offer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 5%;
+    padding-top: 2vh;
+    margin-left: 5%;
+}
+
+.service .offer a > img{
+    width: auto;
+    height: 250px;
+}
+
+.service .offer a > p{
+    font-size: 17px;
+    font-weight: bold;
+    color: black;
+}
+
+@media screen and (max-width: 450px){
+    .service .offer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 3vw;
+    }
+    .service .offer a > p{
+        display: flex;
+        align-self: center;
+    }
+}
