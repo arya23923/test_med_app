@@ -57,8 +57,8 @@ a{
     color: black;
     /* padding-left: 5%;
     padding-right: 5%; */
-    padding-left: 3%;
-    padding-right: 3%;
+    padding-left: 4%;
+    padding-right: 4%;
     min-width: fit-content;
 }
 
@@ -78,30 +78,31 @@ a{
 }
 
 .auth-links .sign{
-    width: 6vw;
+    width: 7vw;
     display: flex;
-    border: 1px solid rgb(6,6,117);
-    border-radius: 10px;
+    border: 1px solid rgb(13, 13, 160);
+    border-radius: 15px;
     align-self: center;
     /* min-width: 11vw; */
     /* margin-top: -1vh; */
     padding: 1vh;
-    /* padding-left: 3%;
-    padding-right: 3%; */
+    padding-left: 1.5vw;
+    
     align-self: center;
 }
 
 .auth-links .log{
-    width: 5vw;
+    width: 7vw;
     border: 1px solid rgb(6,6,117);
-    border-radius: 10px;
+    border-radius: 15px;
     /* min-width: 8vw; */
     padding: 1vh;
+    padding-left: 2vw;
     /* margin-top: -1vh; */
     margin-right: -20vw;
 }
 
-.user-info{
+.right .user-info-navbar{
     font-size: 17px;
     font-weight: regular;
     display: flex;
@@ -111,15 +112,16 @@ a{
     height: 5vh;
 }
 
-.user-info .username{
+.right .user-info-navbar .username{
     padding: 1vw;
     font-weight: regular;
 }
 
-.user-info button{
-    padding: 1vh;
+.right .user-info-navbar .logout{
+    padding:1.5vh;
     font-weight: regular;
-    border: 1px solid rgb(6, 6, 117);
+    border: 1px solid #007bff;
+    border-radius: 15px;
 }
 /* phone screen */
 @media screen and (max-width : 450px){
@@ -160,13 +162,13 @@ a{
         margin-left: 1vw;
         margin-right: 1vw;
     }
-    .user-info .username{
+    .right .user-info-navbar .username{
         padding: 1vw;
         font-weight: regular;
         font-size: 10px;
         padding-top: 4vh;
     }
-    .user-info button{
+    .right .user-info-navbar button{
         padding: 1vh;
         font-weight: regular;
         border: 1px solid rgb(6, 6, 117);

@@ -69,7 +69,7 @@ const Navbar = () => {
                     <Link to='/login' className = 'log'>Login</Link> */}
                      {/* If logged in, show user email and a logout button */}
                     {isLoggedIn ? (
-                        <div className="user-info">
+                        <div className="user-info-navbar">
                             {/* <button onClick={handleDropdown}> */}
                             <div className="username">Welcome, {username}</div>
                              {/* Display user email or username */}
@@ -79,7 +79,7 @@ const Navbar = () => {
                                     <button onClick={handleLogout}>Logout</button>
                                 </div>
                             )} */}
-                            <button onClick={handleLogout}>Logout</button>
+                            <button className='logout' onClick={handleLogout}>Logout</button>
                         </div>
                     ) : (
                         <div className="auth-links">
