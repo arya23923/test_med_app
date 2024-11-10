@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import './ReviewForm.css'
-import { application } from "express";
 
 const Review = () => {
     const storedData = Object.keys(localStorage).filter((key) => key.startsWith('appointments_')).map((key) => JSON.parse(localStorage.getItem(key))).flat();
@@ -16,15 +15,17 @@ const Review = () => {
                 <strong>Provide feedback</strong>
                 <strong>Review given</strong>
             </div>
-            {/* {storedData.map((appointment, index) => (
-                <div className="end">
-                    <p>{index+1}</p>
-                    <p>{appointment.doctorName}</p>
-                    <p>{appointment.doctorSpeciality}</p> 
-                    <button>Click here</button>
-                    <p></p>
-                </div>
-            ))} */}
+            <div className="end">
+                {storedData.map((appointment, index) => {
+                    <>
+                        <p>{index + 1}</p>
+                        <p>{appointment.doctorName}</p>
+                        <p>{appointment.doctorSpeciality}</p>
+                        <p><button>Click Here</button></p>
+                        <p></p>
+                    </>
+                })}
+            </div>
         </div>
     )
 }

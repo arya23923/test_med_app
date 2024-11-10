@@ -4,17 +4,3 @@
     align-items: center;
     flex-direction: column;
 }
-
-.review .middle {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    font-size: 20px;
-    padding: 1%;
-    width: 90vw;
-}
-
-.review .head{
-    font-size: 40px;
-    padding: 3%;
-}
