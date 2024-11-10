@@ -18,7 +18,7 @@ const Service = () => {
                     <img src={consult}></img>
                     <p>Instant consultation</p>
                 </Link>
-                <Link to=''>
+                <Link to='/appointment-consultation'>
                     <img src={appointment}></img>
                     <p>Book an appointment</p>
                 </Link>

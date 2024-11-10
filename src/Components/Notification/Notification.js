@@ -4,43 +4,29 @@ import Navbar from '../Navbar/Navbar';
 import './Notification.css'
 
 const Notification = ({ children }) => {
-  // State variables to manage user authentication, username, doctor data, and appointment data
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [username, setUsername] = useState("");
   const [doctorData, setDoctorData] = useState(null);
-  const [appointmentData, setAppointmentData] = useState([]);
-
-  const loadAppointmentsFromLocalStorage = () => {
-    // Retrieve appointment data from localStorage
+  const [appointmentData, setAppointmentData] = useState(null);
+  // useEffect hook to perform side effects in the component
+  useEffect(() => {
+    // Retrieve stored username, doctor data, and appointment data from sessionStorage and localStorage
+    const storedUsername = sessionStorage.getItem('email');
     const storedAppointmentData = Object.keys(localStorage)
       .filter((key) => key.startsWith('appointments_'))
       .map((key) => JSON.parse(localStorage.getItem(key)))
-      .flat(); // Flatten to handle nested data
+      .flat();
 
-    setAppointmentData(storedAppointmentData);
-  };
-
-  // useEffect hook to perform side effects in the component
-  useEffect(() => {
-    // Retrieve stored username from sessionStorage
-    const storedUsername = sessionStorage.getItem('email');
+    // Set isLoggedIn state to true and update username if storedUsername exists
     if (storedUsername) {
       setIsLoggedIn(true);
       setUsername(storedUsername);
     }
-
-    // Load initial appointments
-    loadAppointmentsFromLocalStorage();
-
-    // Add event listener for storage changes
-    const handleStorageChange = () => {
-      loadAppointmentsFromLocalStorage();
-    };
-
-    window.addEventListener('storage', handleStorageChange);
-    return () => {
-      window.removeEventListener('storage', handleStorageChange);
-    };
+    
+    // Set appointmentData state if storedAppointmentData exists
+    if (storedAppointmentData) {
+      setAppointmentData(storedAppointmentData);
+    }
   }, []);
 
   return (
@@ -49,7 +35,7 @@ const Notification = ({ children }) => {
       {children}
 
       {isLoggedIn && appointmentData.length > 0 && (
-        <div>
+        <div className='notification'>
           {appointmentData.map((appointment, index) => (
             <div className="appointment-card" key={index}>
               <div className="appointment-card__content">

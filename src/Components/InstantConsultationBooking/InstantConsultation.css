@@ -8,10 +8,7 @@
     width: 100%;
 }
 .searchpage-container img {
-    /* max-width: 100%; */
-    margin-left: 0vw;
-    width: 2vw;
-    height: auto;
+    max-width: 100%;
 }
 .search-results-container .doctorcard{
     display:flex;
@@ -36,8 +33,4 @@
     color: #2d2d32;
     text-align: left;
     font-size: 15px;
-}
-
-.find-doctor img{
-    width: 50vw;
 }

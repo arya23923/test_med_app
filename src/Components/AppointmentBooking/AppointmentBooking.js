@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import './InstantConsultation.css';
+import './AppointmentBooking.css';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import FindDoctorSearchIC from './FindDoctorSearchIC/FindDoctorSearchIC';
-import DoctorCardIC from './DoctorCardIC/DoctorCardIC';
+import FindDoctorSearchAB from './FindDoctorSearchAB/FindDoctorSearchAB';
+import DoctorCardAB from './DoctorCardAB/DoctorCardAB';
 
-const InstantConsultation = () => {
+const AppointmentConsultation = () => {
     const [searchParams] = useSearchParams();
     const [doctors, setDoctors] = useState([]);
     const [filteredDoctors, setFilteredDoctors] = useState([]);
@@ -52,24 +52,24 @@ const InstantConsultation = () => {
     const navigate = useNavigate();
     useEffect(() => {
         getDoctorsDetails();
-        // const authtoken = sessionStorage.getItem("auth-token");
-        // if (!authtoken) {
-        //     navigate("/login");
-        // }
+        const authtoken = sessionStorage.getItem("auth-token");
+        if (!authtoken) {
+            navigate("/login");
+        }
     }, [searchParams])
 
     return (
         <center>
-            <div  className="searchpage-container">
-                <h1>Find a doctor and consult instantly</h1>
-            <FindDoctorSearchIC onSearch={handleSearch} />
+            <div  className="searchpage-container-appointment">
+                <h1>Find a doctor at your own ease</h1>
+            <FindDoctorSearchAB onSearch={handleSearch} />
             <div className="search-results-container">
             {isSearched ? (
                 <center>
                     <h2>{filteredDoctors.length} doctors are available {searchParams.get('location')}</h2>
                     <h3>Book appointments with minimum wait-time & verified doctor details</h3>
                     {filteredDoctors.length > 0 ? (
-                    filteredDoctors.map(doctor => <DoctorCardIC className="doctorcard" {...doctor} key={doctor.name} />)
+                    filteredDoctors.map(doctor => <DoctorCardAB className="doctorcard" {...doctor} key={doctor.name} />)
                     ) : (
                     <p>No doctors found.</p>
                     )}
@@ -83,4 +83,4 @@ const InstantConsultation = () => {
     )
 }
 
-export default InstantConsultation
+export default AppointmentConsultation;

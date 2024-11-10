@@ -4,9 +4,16 @@
     justify-content: flex-start;
     align-items: flex-end;
     padding: 2%;
-    width: 20vw;
-    margin-top: -20vh;
+    width: 25vw;
+    /* margin-top: -20vh; */
     background-color: aqua;
     border: 1px solid aqua;
     border-radius: 10px;
+}
+
+.notification{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
 }

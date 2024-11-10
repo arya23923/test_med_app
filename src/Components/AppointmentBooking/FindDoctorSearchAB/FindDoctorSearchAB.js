@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './FindDoctorSearchIC.css';
+// import './FindDoctorSearchIC.css';
 import { useNavigate, Navigate } from 'react-router-dom';
 
 import search from '../../images/doctor_search.jpg'
@@ -10,7 +10,7 @@ const initSpeciality = [
     'Dentist', 'Gynecologist/obstetrician', 'General Physician', 'Dermatologist', 'Ear-nose-throat (ent) Specialist', 'Homeopath', 'Ayurveda'
 ]
 
-const FindDoctorSearchIC = () => {
+const FindDoctorSearchAB = () => {
     const [doctorResultHidden, setDoctorResultHidden] = useState(true);
     const [searchDoctor, setSearchDoctor] = useState('');
     const [specialities, setSpecialities] = useState(initSpeciality);
@@ -18,15 +18,14 @@ const FindDoctorSearchIC = () => {
     const handleDoctorSelect = (speciality) => {
         setSearchDoctor(speciality);
         setDoctorResultHidden(true);
-        navigate(`/instant-consultation?speciality=${speciality}`);
+        navigate(`/appointment-consultation?speciality=${speciality}`);
         window.location.reload();
     }
     return (
         <div className='finddoctor'>
             <center>
-                <h1>Find a doctor and Consult instantly</h1>
-                <div className='main-image'>               <img src={search} alt='search image'/>
-</div>                <div className="home-search-container"  style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
+                 <div className='main-image'>               <img src={search} alt='search image' /> 
+</div>                 <div className="home-search-container"  style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
                     <div className="doctor-search-box">
                     {/* <p>Perform a search to see the results.</p> */}
 
@@ -49,4 +48,4 @@ const FindDoctorSearchIC = () => {
     )
 }
 
-export default FindDoctorSearchIC
+export default FindDoctorSearchAB

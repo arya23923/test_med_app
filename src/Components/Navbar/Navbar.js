@@ -61,10 +61,10 @@ const Navbar = () => {
                     <img src={stethoscopeImage} alt="stethoscope" />
                 </div>
                 <div className="right">
-                    <Link to='/'>Home</Link> 
+                    <Link to='/service'>Home</Link> 
                     <Link to=''>Appointments</Link>
                     <Link to='' className = 'health'>Health Blog</Link>
-                    <Link to=''>Reviews</Link>
+                    <Link to='/review'>Reviews</Link>
                     {/* <Link to='/sign-up' className = 'sign'>Sign up</Link>
                     <Link to='/login' className = 'log'>Login</Link> */}
                      {/* If logged in, show user email and a logout button */}
