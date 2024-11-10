@@ -2,12 +2,12 @@ import React, { useState } from 'react'
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 
-import './AppointmentFormIC.css'
+// import './AppointmentFormIC.css'
 
 const AppointmentFormIC = ({ doctorName, doctorSpeciality, onSubmit }) => {
     const [name, setName] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
-    const [appointmentDate, setAppointmentDate] = useState(null);
+    const [appointmentDate, setAppointmentDate] = useState(new Date());
     const [selectedSlot, setSelectedSlot] = useState(null);
   
     const handleSlotSelection = (slot) => {
@@ -33,7 +33,7 @@ const AppointmentFormIC = ({ doctorName, doctorSpeciality, onSubmit }) => {
         alert('Please select a time slot');
         return;
       }
-      onSubmit({ name, phoneNumber, appointmentDate, selectedSlot });
+      onSubmit({ doctorName, doctorSpeciality, name, phoneNumber, appointmentDate, selectedSlot });
       setName('');
       setPhoneNumber('');
       setAppointmentDate(null);
@@ -67,7 +67,7 @@ const AppointmentFormIC = ({ doctorName, doctorSpeciality, onSubmit }) => {
           <DatePicker
             selected={appointmentDate}
             onChange={handleDateChange}
-            dateFormat="MMMM d, yyyy"
+            dateFormat="dd/MM/yyyy"
             minDate={new Date()} // Ensure only future dates can be selected
             required
           />

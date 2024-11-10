@@ -15,23 +15,24 @@ import Login from './Components/login/login';
 import Landing_page from './Components/Landing_Page/Landing_page';
 import InstantConsultation from './Components/InstantConsultationBooking/InstantConsultation';
 import Service from './Components/services/services';
+import Notification from './Components/Notification/Notification';
 
 function App() {
   return (
       <div className="App">
           {/* Set up BrowserRouter for routing */}
           <BrowserRouter>
-            {/* Display the Navbar component */}
-            <Navbar/>
-            {/* Set up the Routes for different pages */}
-            <Routes>
-              {/* Define individual Route components for different pages */}
-              <Route path="/" element={<Landing_page/>}/>
-              <Route path="/login" element={<Login />} />
-              <Route path="/sign-up" element={<SignUp />} />
-              <Route path="/instant-consultation" element={<InstantConsultation />} />
-              <Route path='/service' element={<Service />} />
-            </Routes>
+            <Notification>
+              {/* Set up the Routes for different pages */}
+              <Routes>
+                {/* Define individual Route components for different pages */}
+                <Route path="/" element={<Landing_page/>}/>
+                <Route path="/login" element={<Login />} />
+                <Route path="/sign-up" element={<SignUp />} />
+                <Route path="/instant-consultation" element={<InstantConsultation />} />
+                <Route path='/service' element={<Service />} />
+              </Routes>
+            </Notification>
           </BrowserRouter>
       </div>
   );

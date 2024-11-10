@@ -5,29 +5,40 @@ import './DoctorCardIC.css';
 import AppointmentFormIC from '../AppointmentFormIC/AppointmentFormIC'
 import { v4 as uuidv4 } from 'uuid';
 
-
 const DoctorCardIC = ({ name, speciality, experience, ratings, profilePic }) => {
   const [showModal, setShowModal] = useState(false);
   const [appointments, setAppointments] = useState([]);
+
+  useEffect(() => {
+    // Load appointments for this specific doctor
+    const storedAppointments = JSON.parse(localStorage.getItem(`appointments_${name}`)) || [];
+    setAppointments(storedAppointments);
+  }, [name]);
 
   const handleBooking = () => {
     setShowModal(true);
   };
 
   const handleCancel = (appointmentId) => {
+    // Remove appointment from state
     const updatedAppointments = appointments.filter((appointment) => appointment.id !== appointmentId);
     setAppointments(updatedAppointments);
+    
+    // Remove appointment from localStorage
+    localStorage.setItem(`appointments_${name}`, JSON.stringify(updatedAppointments));
   };
 
   const handleFormSubmit = (appointmentData) => {
     const newAppointment = {
       id: uuidv4(),
       ...appointmentData,
+      date: appointmentData.appointmentDate.toLocaleString(),
     };
     const updatedAppointments = [...appointments, newAppointment];
     setAppointments(updatedAppointments);
+    localStorage.setItem(`appointments_${name}`, JSON.stringify(updatedAppointments));
     setShowModal(false);
-  };
+  };  
 
   return (
     <div className="doctor-card-container">
@@ -89,6 +100,8 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, profilePic }) => 
                     <div className="bookedInfo" key={appointment.id}>
                       <p>Name: {appointment.name}</p>
                       <p>Phone Number: {appointment.phoneNumber}</p>
+                      <p>Date of appointment: {appointment.date}</p>
+                      <p>Slot selected: {appointment.selectedSlot}</p>
                       <button onClick={() => handleCancel(appointment.id)}>Cancel Appointment</button>
                     </div>
                   ))}

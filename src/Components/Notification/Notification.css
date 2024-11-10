@@ -1,0 +1,12 @@
+.appointment-card{
+    display: flex;
+    position: sticky;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 2%;
+    width: 20vw;
+    margin-top: -20vh;
+    background-color: aqua;
+    border: 1px solid aqua;
+    border-radius: 10px;
+}
