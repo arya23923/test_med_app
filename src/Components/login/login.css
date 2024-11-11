@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.back-login a > img{
+    /* width: 4vw;
+    height: 4vh;*/
+    margin-top: 2vh;
+    /*padding: 4%; */
+    margin-left: 2vw;
+}
+
+.form-login{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    margin-top: -2vh;
+}
+.form-login .left-login > img{
+    width: 55vw;
+    height: auto;
+    margin-left: -10vw;
+    margin-top: 4vh;
+    margin-right: 5vw;
+}
+
+.right-login {
+    margin-right: -10vw;
+    width: 25vw;
+    margin-top: 15vh;
+}
+
+.right-login .heading{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-style: normal;
+    font-size: 50px;
+    padding: 2%;
+    margin-top: -40vh;
+    margin-right: -8vw;
+}
+
+.right-login .subheading{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: regular;
+    font-style: normal;
+    font-size: 20px;
+    padding-bottom: 5%;
+    width: 20vw;
+}
+
+.right-login a {
+    text-decoration: none;
+    color: rgb(15, 36, 119);
+}
+
+.right-login label {
+    font-size: 25px;
+    font-weight: bold;
+    padding: -5%;
+}
+.right-login form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right-login input {
+    padding: 3%;
+    border: 1px black solid;
+    border-radius: 10px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: regular;
+    font-style: normal;
+    font-size: 17px;
+}
+
+.right-login form input::placeholder{
+    font-size: 15px;
+}
+
+
+.right-login button {
+    width: 5vw;
+    padding: 4%;
+    margin-bottom: 5vh;
+    font-size: 15px;
+}
+
+.right-login #submit {
+    background-color: blue;
+    color: white;
+    border: 1px solid blue;
+    border-radius: 10px;
+}
+
+.right-login #reset{
+    background-color: red;
+    color: white;
+    border: 1px solid red;
+    border-radius: 10px;
+    
+}
+
+/* phone screen */
+@media screen and (max-width: 450px){
+    .left-login{
+        display: none;
+    }
+    .right-login{
+        width: 70vw;
+        margin-top: 50vh;
+    }
+    .right-login .subheading{
+        width: 100vw;
+    }
+    .right-login input::placeholder{
+        font-size: 16px;
+    }
+    .right-login button{
+        width: 20vw;
+    }
+}
+
+/* tablet screen */
+@media screen and (max-width: 850px) and (min-width: 450px){
+    .right-login{
+        width: 70vw;
+        margin-top: 50vh;
+    }
+    .right-login .subheading{
+        width: 100%;
+    }
+    .form-login .left-login > img{
+        display: none;
+    }
+    .right-login button {
+        width: 20vw;
+        font-size: 20px;
+    }
+    .right-login input::placeholder{
+        font-size: 20px;
+    }
+}

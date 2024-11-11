@@ -1,0 +1,77 @@
+.check-body .self-check-head {
+    display: flex;
+    flex-direction: row;
+    padding: 5%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(162, 162, 250);
+    width: 70vw;
+    margin-left: 17vw;
+    height: 40vh;
+    margin-top: 10vh;
+    border: 1px solid rgb(162, 162, 250);
+    border-radius: 10px;
+}
+
+.check-body .self-check-head > img{
+    width: 20vw;
+    height: auto;
+    padding: 3%;
+}
+
+.check-body .self-check-head > p{
+    width: 60vw;
+    font-size: 15px;
+}
+
+.check-body .thermometer {
+    display: flex;
+    flex-direction: row;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 4%;
+    /* padding-bottom: 0.1%; */ 
+}
+
+.check-body .thermometer > img {
+    width: 15vw;
+    height: auto;
+    padding-right: 3%;
+}
+
+.check-body .thermometer >p {
+    width: 30vw;
+    height: 30vh;
+}
+
+.check-body .thermometer:nth-child(2){
+    margin-top: -20vh;
+}
+
+@media screen and (max-width: 450px){
+    .check-body .self-check-head{
+        width: 110vw;
+        margin-top: 0vh;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+    .check-body .self-check-head > p{
+        font-size: 10px;
+    }
+    .check-body .self-check-head > img{
+        width: 40vw;
+    }
+    .check-body .thermometer{
+        width: fit-content;
+        padding-left: 20%;
+        padding-right: 1%;
+        padding-top: 5%;
+    }
+    .check-body .thermometer > p{
+        font-size: 10px;
+        width: 100vw;
+    }
+    .check-body .thermometer > img{
+        display: none;
+    }
+}

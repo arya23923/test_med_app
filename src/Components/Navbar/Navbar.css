@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    padding-top: 5vh;
+    padding-left: 4vw;
+    padding-right: 1vw;
+    height: 15vh;
+}
+
+img {
+    height: 40px;
+    width: 40px;
+    margin-left: -4vw;
+    margin-top: 1vh;
+}
+
+.logo{
+    display: flex;
+    justify-content: space-evenly;
+    align-self: flex-start;
+    width: 30vw;
+}
+
+.logo .name{
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+}
+
+.right{
+    display: flex;
+    justify-content: space-around;
+    font-family: "Inter", sans-serif;
+    min-width: fit-content;
+    font-optical-sizing: auto;
+    font-weight: regular;
+    font-style: normal;
+    font-size: 17px;
+    align-items: flex-end;
+    align-self: stretch; 
+    margin-left: 8vw;
+    /* margin-top: -10vh; */
+    width: 30vw;
+    height: 5vh;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    /* padding-left: 5%;
+    padding-right: 5%; */
+    padding-left: 4%;
+    padding-right: 4%;
+    min-width: fit-content;
+}
+
+.health{
+    width: 6vw;
+}
+
+.right .auth-links{
+    display: flex;
+    flex-direction: row;
+    /* border: 5px; */
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    padding-top: 2vh;
+    height: 5vh;
+}
+
+.auth-links .sign{
+    width: 7vw;
+    display: flex;
+    border: 1px solid rgb(13, 13, 160);
+    border-radius: 15px;
+    align-self: center;
+    /* min-width: 11vw; */
+    /* margin-top: -1vh; */
+    padding: 1vh;
+    padding-left: 1.5vw;
+    
+    align-self: center;
+}
+
+.auth-links .log{
+    width: 7vw;
+    border: 1px solid rgb(6,6,117);
+    border-radius: 15px;
+    /* min-width: 8vw; */
+    padding: 1vh;
+    padding-left: 2vw;
+    /* margin-top: -1vh; */
+    margin-right: -20vw;
+}
+
+.right .user-info-navbar{
+    font-size: 17px;
+    font-weight: regular;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 5vh;
+}
+
+.right .user-info-navbar .username{
+    padding: 1vw;
+    font-weight: regular;
+}
+
+.right .user-info-navbar .logout{
+    padding:1.5vh;
+    font-weight: regular;
+    border: 1px solid #007bff;
+    border-radius: 15px;
+}
+
+.user-info-navbar {
+    position: relative; /* Set the parent of the dropdown to relative positioning */
+}
+
+.dropdown-menu {
+    position: absolute; 
+    top: 100%; 
+    left: 0; 
+    margin-top: 3vh;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 1em;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    min-width: 150px; /* Adjust as needed */
+    z-index: 10; /* Ensure it appears above other elements */
+}
+
+.drop {
+    display: flex;
+    align-items: center;
+    gap: 20em; /* Add some space between the welcome text and the dropdown icon */
+}
+
+
+/* phone screen */
+@media screen and (max-width : 450px){
+    img {
+        height: 15px;
+        width: 15px;
+        padding: 3%;
+        margin-top: 1vh;
+        margin-left: 0vw;
+    }
+    .logo .name{
+        font-size: 10px;
+        margin-top: 1vh;
+    }
+    .logo{
+        margin-top: -2vh;
+    }
+     
+    .right{
+        margin-top: -4vh;
+        font-size: 10px;
+        margin-left: 3vw;
+    }
+    .health{
+        width: 20vw;
+    }
+    .sign{
+        border-radius: 10px;
+        margin-top: 1vh;
+        padding: 3vw;
+        width: fit-content;
+    }
+    .log{
+        border-radius: 10px;
+        width: fit-content;
+        padding: 2vw;
+        margin-top: 1vh;
+        margin-left: 1vw;
+        margin-right: 1vw;
+    }
+    .right .user-info-navbar .username{
+        padding: 1vw;
+        font-weight: regular;
+        font-size: 10px;
+        padding-top: 4vh;
+    }
+    .right .user-info-navbar button{
+        padding: 1vh;
+        font-weight: regular;
+        border: 1px solid rgb(6, 6, 117);
+        font-size: 10px;
+        margin-top: 3vh;
+    }
+}
+
+/* tablet screen */
+@media screen and (max-width : 850px) and (min-width : 450px){
+    .logo .name{
+        font-size: 25px;
+        margin-top: 0vh;
+        margin-left: 0vw;
+    }
+    img {
+        height: 25px;
+        width: 25px;
+        margin-top: 0vh;
+        margin-left: 1vw;
+    }
+    .right{
+        margin-top: -2vh;
+        font-size: 17px;
+        margin-left: 3vw;
+    }
+    .health{
+        width: 5vw;
+    }
+    .sign{
+        margin-top: 2vh;
+        width: 10vw;
+    }
+    .log{
+        margin-top: 2vh;
+        width: 7vw;
+        margin-right: 4vw;
+    }
+}

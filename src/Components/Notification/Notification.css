@@ -1,0 +1,21 @@
+.appointment-card{
+    display: flex;
+    position: sticky;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 2%;
+    width: 25vw;
+    /* margin-top: -20vh; */
+    background-color: aqua;
+    border: 1px solid aqua;
+    border-radius: 10px;
+    min-width: fit-content;
+}
+
+.notification{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 5vh;
+}
