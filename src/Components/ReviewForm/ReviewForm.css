@@ -4,3 +4,53 @@
     align-items: center;
     flex-direction: column;
 }
+.review .middle {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 20px;
+    padding: 1%;
+    width: 100vw;
+    color: rgb(81, 81, 81);
+}
+.review .middle > strong:nth-child(3){
+    padding-left: 3%;
+}
+
+.review .head{
+    font-size: 40px;
+    padding: 3%;
+}
+
+.review .end .details {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1%;
+    width: 90vw;
+    margin-left: 2vw;
+}
+
+.review .end .details > p:nth-child(1){
+    padding-right: 1%;
+    
+}
+.review .end .details > p:nth-child(2){
+    padding-right: -4wv;
+    padding-left: -4vw;
+    width: 9vw;
+   
+}
+.review .end .details > p:nth-child(3){
+    width: 14vw;
+    
+}
+.review .end .details button{
+    width: 10vw;
+    /* margin-top: -1vh; */
+    
+}
+
+.review .end .details > textarea{
+    width: 5vw;
+}
