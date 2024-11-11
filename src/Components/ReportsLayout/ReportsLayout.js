@@ -66,7 +66,7 @@ const Report = () => {
     return (
         <div className="review">
             <div className="head">
-                <strong>Review</strong>
+                <strong>Report</strong>
             </div>
             <div className="middle">
                 <strong>Serial Number</strong>
