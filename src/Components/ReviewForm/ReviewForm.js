@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Popup from 'reactjs-popup';
 
 import './ReviewForm.css'
+import Fivestar from '../Fivestar.js'
 
 const Review = () => {
     const storedData = Object.keys(localStorage)
@@ -9,20 +10,45 @@ const Review = () => {
         .map((key) => JSON.parse(localStorage.getItem(key)))
         .flat();
 
-    // State to store reviews for each appointment
+    const [rating, setRating] = useState(0);
     const [reviews, setReviews] = useState({});
-    // State to track if the user has given a review for each appointment
     const [submittedReviews, setSubmittedReviews] = useState({});
 
-    // Function to handle review submission
-    const handleReviewSubmit = (appointmentId, review) => {
-        // Update the reviews state with the new review
+    // Load reviews from localStorage when component mounts
+    useEffect(() => {
+        const savedReviews = {};
+        const savedSubmittedReviews = {};
+
+        storedData.forEach((appointment) => {
+            const appointmentId = appointment.id;
+            const reviewData = JSON.parse(localStorage.getItem(`review_${appointmentId}`));
+
+            if (reviewData) {
+                savedReviews[appointmentId] = reviewData.reviewText;
+                savedSubmittedReviews[appointmentId] = true; // Mark as reviewed
+            }
+        });
+
+        setReviews(savedReviews);
+        setSubmittedReviews(savedSubmittedReviews);
+    }, [storedData]);
+
+    const handleReviewSubmit = (appointmentId, reviewText, appointment) => {
+        const reviewData = {
+            doctorName: appointment.doctorName,
+            doctorSpeciality: appointment.doctorSpeciality,
+            reviewText: reviewText,
+            rating: rating,
+        };
+
+        // Save to localStorage
+        localStorage.setItem(`review_${appointmentId}`, JSON.stringify(reviewData));
+
+        // Update state to reflect submitted review
         setReviews((prevReviews) => ({
             ...prevReviews,
-            [appointmentId]: review,
+            [appointmentId]: reviewText,
         }));
-
-        // Mark the appointment as reviewed
         setSubmittedReviews((prevSubmittedReviews) => ({
             ...prevSubmittedReviews,
             [appointmentId]: true,
@@ -43,7 +69,7 @@ const Review = () => {
             </div>
             <div className="end">
                 {storedData.map((appointment, index) => {
-                    const appointmentId = appointment.id; // Assuming each appointment has a unique `id`
+                    const appointmentId = appointment.id;
 
                     return (
                         <div className="details" key={appointmentId}>
@@ -59,7 +85,6 @@ const Review = () => {
                                     }
                                     modal
                                     nested
-                                    disabled={submittedReviews[appointmentId]} // Disable popup trigger if review is given
                                 >
                                     {(close) => (
                                         <div
@@ -69,8 +94,7 @@ const Review = () => {
                                                 justifyContent: 'space-evenly',
                                                 alignItems: 'center',
                                                 flexDirection: 'column',
-                                                height: '90vh',
-                                                width: '50vw',
+                                                height: '80vh',
                                             }}
                                         >
                                             <div
@@ -112,11 +136,12 @@ const Review = () => {
                                                 style={{ width: '40vw', padding: '5%' }}
                                                 required
                                             />
+                                            <Fivestar rating={rating} setRating={setRating} />
                                             <button
                                                 type="submit"
                                                 onClick={() => {
                                                     const reviewText = document.getElementById('reviewText').value;
-                                                    handleReviewSubmit(appointmentId, reviewText);
+                                                    handleReviewSubmit(appointmentId, reviewText, appointment);
                                                     close(); // Close the popup after submission
                                                 }}
                                                 style={{ width: '10vw' }}

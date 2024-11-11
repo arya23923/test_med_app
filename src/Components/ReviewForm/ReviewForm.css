@@ -10,7 +10,7 @@
     align-items: center;
     font-size: 20px;
     padding: 1%;
-    width: 100vw;
+    width: 95vw;
     color: rgb(81, 81, 81);
 }
 .review .middle > strong:nth-child(3){
@@ -27,8 +27,8 @@
     justify-content: space-evenly;
     align-items: center;
     padding: 1%;
-    width: 90vw;
-    margin-left: 2vw;
+    width: 100vw;
+    margin-left: 10vw;
 }
 
 .review .end .details > p:nth-child(1){
@@ -51,6 +51,7 @@
     
 }
 
-.review .end .details > textarea{
-    width: 5vw;
+.review .end .details > p:nth-child(5){
+    width: 10vw;
+    /* margin-left: vw; */
 }

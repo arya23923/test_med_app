@@ -8,6 +8,11 @@ const Notification = ({ children }) => {
   const [username, setUsername] = useState("");
   const [doctorData, setDoctorData] = useState(null);
   const [appointmentData, setAppointmentData] = useState(null);
+
+  const storedAppointmentData = Object.keys(localStorage)
+      .filter((key) => key.startsWith('appointments_'))
+      .map((key) => JSON.parse(localStorage.getItem(key)))
+      .flat();
   // useEffect hook to perform side effects in the component
   useEffect(() => {
     // Retrieve stored username, doctor data, and appointment data from sessionStorage and localStorage
