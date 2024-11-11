@@ -20,6 +20,8 @@ import Review from './Components/ReviewForm/ReviewForm'
 import AppointmentConsultation from './Components/AppointmentBooking/AppointmentBooking';
 import ProfileCard from './Components/ProfileCard/ProfileCard'
 import Report from './Components/ReportsLayout/ReportsLayout'
+import SelfCheckup from './Components/SelfCheck/SelfCheck';
+import Health from './Components/HealthTips/HealthTips';
 
 function App() {
   return (
@@ -39,6 +41,8 @@ function App() {
                 <Route path='/appointment-consultation' element={<AppointmentConsultation />} />
                 <Route path='/profile' element={<ProfileCard />}  />
                 <Route path='/report' element={<Report />}  />
+                <Route path='/self-check' element={<SelfCheckup />}  />
+                <Route path='/health' element={<Health />} />
               </Routes>
             </Notification>
           </BrowserRouter>

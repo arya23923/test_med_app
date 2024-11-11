@@ -55,3 +55,25 @@
     width: 10vw;
     /* margin-left: vw; */
 }
+
+@media screen and (max-width: 450px){
+    .review .middle{
+        font-size: 15px;
+    }
+    .review .end .details{
+        font-size: 15px;
+    }
+    .review .end .details > p:nth-child(5){
+        font-size: 10px;
+        width: 30vw;
+        margin-right: -20vw;
+    }
+    .review .end .details > p:nth-child(3){
+        padding-left: 5%;
+        padding-right: 10%;
+    }
+    .review .end .details > button {
+        width: 10vw;
+
+    }
+}

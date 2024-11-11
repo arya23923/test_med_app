@@ -49,4 +49,25 @@
         display: flex;
         align-self: center;
     }
+    .service{
+        margin-top: -10vh;
+    }
+}
+
+@media screen and (max-width: 850px) and (min-width: 450px){
+    .service{
+        width: 50vw;
+        display: flex;
+        justify-content: center;
+        margin-top: -10vw;
+        padding: 5%;
+        margin-left: 30vw;
+        align-items: center;
+    }
+    .service .offer{
+        width: 70vw;
+        margin-left: 0vw;
+        display: flex;
+        flex-direction: column;
+    }
 }
