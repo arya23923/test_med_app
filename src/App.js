@@ -19,6 +19,7 @@ import Notification from './Components/Notification/Notification';
 import Review from './Components/ReviewForm/ReviewForm'
 import AppointmentConsultation from './Components/AppointmentBooking/AppointmentBooking';
 import ProfileCard from './Components/ProfileCard/ProfileCard'
+import Report from './Components/ReportsLayout/ReportsLayout'
 
 function App() {
   return (
@@ -36,7 +37,8 @@ function App() {
                 <Route path='/service' element={<Service />} />
                 <Route path='/review' element={<Review />} />
                 <Route path='/appointment-consultation' element={<AppointmentConsultation />} />
-                <Route path='./profile' element={<ProfileCard />}  />
+                <Route path='/profile' element={<ProfileCard />}  />
+                <Route path='/report' element={<Report />}  />
               </Routes>
             </Notification>
           </BrowserRouter>

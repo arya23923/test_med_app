@@ -169,6 +169,9 @@ const Navbar = () => {
                                 <Link to='/profile' style={{ padding: '1%', color: 'rgb(100,100,100)' }}>
                                     Your profile
                                 </Link>
+                                <Link to='/report' style={{ padding: '1%', color: 'rgb(100,100,100)' }}>
+                                    Your reports
+                                </Link>
                             </div>
                         )}
 
