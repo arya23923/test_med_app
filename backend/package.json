@@ -15,7 +15,7 @@
     "uuid": "^11.0.2",
     "jsonwebtoken": "^9.0.2",
     "express-session": "^1.18.1",
-    "passport": "^1.2.0"
+    "passport": "^0.6.0"
   },
   "scripts": {
     "start": "node server/index.js",
