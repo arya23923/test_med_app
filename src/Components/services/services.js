@@ -22,7 +22,7 @@ const Service = () => {
                     <img src={appointment}></img>
                     <p>Book an appointment</p>
                 </Link>
-                <Link to=''>
+                <Link to='/'>
                     <img src={self_checkup}></img>
                     <p>Self checkup</p>
                 </Link>

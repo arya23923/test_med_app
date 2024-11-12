@@ -39,6 +39,7 @@ function App() {
                 <Route path='/appointment-consultation' element={<AppointmentConsultation />} />
                 <Route path='/profile' element={<ProfileCard />}  />
                 <Route path='/report' element={<Report />}  />
+                
               </Routes>
             </Notification>
           </BrowserRouter>

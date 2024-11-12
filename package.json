@@ -63,13 +63,12 @@
     "uuid": "^11.0.2",
     "web-vitals": "^2.1.4"
   },
-   
-"scripts": { 
-  "start": "react-scripts start", 
-  "build": "react-scripts build", 
-  "test": "react-scripts test", 
-  "eject": "react-scripts eject" 
- },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-scripts eject"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -100,7 +99,8 @@
     "stream-browserify": "^3.0.0",
     "stream-http": "^3.2.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
-    "url": "^0.11.4"
+    "url": "^0.11.4",
+    "webpack": "^5.96.1"
   },
   "jest": {
     "roots": [
