@@ -13,7 +13,8 @@
     "express": "^4.21.1",
     "mongoose": "^8.8.0",
     "uuid": "^11.0.2",
-    "jsonwebtoken": "^9.0.2"
+    "jsonwebtoken": "^9.0.2",
+    "express-session": "^1.18.1" 
   },
   "scripts": {
     "start": "node server/index.js",
