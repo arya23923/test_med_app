@@ -7,7 +7,7 @@ This site can be viewed here :
 Here are a few screenshots :
 
 home page: 
-<img src = './healthcare_screenshots/homepage.png' width="200" height="auto">
+<img src = './healthcare_screenshots/homepage.png'>
 
 service page:
 <img src = './healthcare_screenshots/services.png'>
