@@ -27,7 +27,7 @@ function App() {
   return (
       <div className="App">
           {/* Set up BrowserRouter for routing */}
-          <BrowserRouter>
+          <BrowserRouter basename="/test_med_app">
             <Notification>
               {/* Set up the Routes for different pages */}
               <Routes>

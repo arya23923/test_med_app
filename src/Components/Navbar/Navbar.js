@@ -149,7 +149,7 @@ const Navbar = () => {
                 <img src={stethoscopeImage} alt="stethoscope" />
             </div>
             <div className="right">
-                <Link to='/service'>Home</Link> 
+                <Link to='/'>Home</Link> 
                 <Link to=''>Appointments</Link>
                 <Link to='' className='health'>Health Blog</Link>
                 <Link to='/review'>Reviews</Link>
