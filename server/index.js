@@ -26,7 +26,6 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 app.get('/', (req, res) => {
     res.send('hello world!');
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 // Set up a POST route at the '/' path
