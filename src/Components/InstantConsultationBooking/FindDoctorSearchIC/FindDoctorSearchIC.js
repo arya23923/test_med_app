@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import './FindDoctorSearchIC.css';
 import { useNavigate, Navigate } from 'react-router-dom';
 
-import './FindDoctorSearchIC.css'
-
 import search from '../../images/doctor_search.jpg'
 import icon from '../../images/search.png'
 

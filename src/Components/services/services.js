@@ -22,11 +22,11 @@ const Service = () => {
                     <img src={appointment}></img>
                     <p>Book an appointment</p>
                 </Link>
-                <Link to='/self-check'>
+                <Link to=''>
                     <img src={self_checkup}></img>
                     <p>Self checkup</p>
                 </Link>
-                <Link to='/health'>
+                <Link to=''>
                     <img src={guideline}></img>
                     <p>Health tips and guidelines</p>
                 </Link>
