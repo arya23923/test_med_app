@@ -65,9 +65,9 @@
   },
    
 "scripts": { 
-  "start": "react-app-rewired start", 
-  "build": "react-app-rewired build", 
-  "test": "react-app-rewired test", 
+  "start": "react-scripts start", 
+  "build": "react-scripts build", 
+  "test": "react-scripts test", 
   "eject": "react-scripts eject" 
  },
   "eslintConfig": {
@@ -89,7 +89,6 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-transform-private-property-in-object": "^7.25.9",
     "assert": "^2.1.0",
     "buffer": "^6.0.3",
     "crypto-browserify": "^3.12.1",
